@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie/pages/add.dart';
+import 'package:movie/view.dart';
 
 class MovieApp extends StatelessWidget {
   const MovieApp({super.key});
@@ -41,7 +42,7 @@ class MovieApp extends StatelessWidget {
             ElevatedButton(
                 onPressed: ()
                 {
-                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ViewMovie()));
                 }, child: Text("view movie")),
             SizedBox(height: 20,),
 

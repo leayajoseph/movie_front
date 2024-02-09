@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:movie/models/MovieModel.dart';
 
 class MovieApiService
 {
@@ -25,6 +26,20 @@ class MovieApiService
     else
       {
         throw Exception("Failed");
+      }
+  }
+  
+  Future<List<Movie>> getdata() async{
+    var client=http.Client();
+    var apiUrl=Uri.parse("http://localhost:3001/api/movie/view");
+    var response=await client.get(apiUrl);
+    if(response.statusCode==200)
+      {
+        return movieFromJson(response.body);
+      }
+    else
+      {
+        return [];
       }
   }
 }
