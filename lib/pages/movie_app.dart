@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie/pages/add.dart';
 
 class MovieApp extends StatelessWidget {
   const MovieApp({super.key});
@@ -27,20 +28,20 @@ class MovieApp extends StatelessWidget {
             ElevatedButton(
                 onPressed: ()
                 {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>MovieAdd()));
 
                 }, child: Text("add movie")),
             SizedBox(height: 20,),
             ElevatedButton(
                 onPressed: ()
                 {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>));
+                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>));
                 }, child: Text("search movie")),
             SizedBox(height: 20,),
             ElevatedButton(
                 onPressed: ()
                 {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>));
+                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>));
                 }, child: Text("view movie")),
             SizedBox(height: 20,),
 
